@@ -18,12 +18,12 @@ bundle
 Basic Usage
 ---
 
-Create a class to process your form and have it inherit from ATC::Base. I typically create the following folder to hold my form classes: app/classes/forms
+Create a class to process your form and have it inherit from ATC::Form. I typically create the following folder to hold my form classes: app/classes/forms
 
 **app/classes/forms/property.rb**
 
 ```ruby
-class Forms::Property < ATC::Base
+class Forms::Property < ATC::Form
 
   input :bedrooms, :integer
   input :price, :float
@@ -61,7 +61,7 @@ General pattern:
 
 ```ruby
 # app/classes/forms/property.rb
-class Forms::Property < ATC::Base
+class Forms::Property < ATC::Form
 
   input :bedrooms, :integer
   input :price, :float

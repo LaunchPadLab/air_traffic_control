@@ -38,7 +38,7 @@ module ATC
       def set_inputs
         setter = ATC::DirectoryParser.new(current_class_name: self.class.name)
         all_inputs = []
-        ATC::Base.input_definitions.each do |class_name, form_inputs|
+        ATC::Form.input_definitions.each do |class_name, form_inputs|
           next unless setter.relevant_classes.include?(class_name)
           form_inputs.each do |form_input|
             all_inputs << set_input(form_input)
